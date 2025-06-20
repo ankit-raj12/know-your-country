@@ -49,7 +49,7 @@ function renderCountries(data){
     })
 }
 
-fetch("https://restcountries.com/v3.1/all").then((res) => res.json())
+fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital").then((res) => res.json())
 .then((data) => {
     renderCountries(data)
     allCountriesData = data
